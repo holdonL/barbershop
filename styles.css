@@ -59,7 +59,7 @@ a {
     font-size: 16px;
     line-height: 20px;
     color: #ffffff;
-    
+
 /*  СТИЛИ ДЛЯ СЕТКИ   */
     display: flex;
     flex-basis: 30%;
@@ -87,6 +87,13 @@ a {
 
 .features-list {
     list-style: none;
+
+    /*СТИЛИ ДЛЯ СЕТКИ*/
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-bottom: 80px;
+    justify-content: space-between;
 }
 
 .feature-item {
@@ -105,6 +112,12 @@ a {
     background-image: url(img/background-1.jpg);
     background-repeat: repeat;
     background-position: 0 0;
+
+    /*СТИЛИ ДЛЯ СЕТКИ*/
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    padding: 50px 80px;
 }
 
 .index-colums h2{
@@ -143,6 +156,9 @@ a {
     background-image: url(img/footer-background.jpg);
     background-position: 0 0;
     background-repeat: repeat;
+
+    margin-top: 65px;
+    padding: 50px;
 }
 
 .product-photo-preview {
@@ -277,6 +293,11 @@ a {
     background-color: #663d15;
 }
 
+.footer-contacts {
+    width: 320px;
+    margin-right: 90px;
+}
+
 .footer-contacts a {
     color: #ffffff;
     text-decoration: underline;
@@ -289,6 +310,8 @@ a {
 
 .footer-social {
     text-align: center;
+
+    width: 150px;
 }
 
 .footer-social ul {
@@ -301,6 +324,10 @@ a {
 
 .footer-copyright {
     text-align: center;
+
+    /*СТИЛИ ДЛЯ СЕТКИ*/
+    width: 140px;
+    margin-left: auto;
 }
 
 .footer-copyright .button:hover,
@@ -350,15 +377,7 @@ a {
     text-decoration: none;
   }
 
-/* Стили для сеток */
-
-
-.main-navigation {
-    display: flex;
-    flex-basis: 30%;
-    flex-direction: column;
-    margin-bottom: 75px;
-}
+/*                       СТИЛИ ДЛЯ СЕТКИ                 */
 
 .main-navigation a {
     order: 3;
@@ -403,23 +422,8 @@ a {
     justify-content: space-between;
 }
 
-.features-list {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    margin-bottom: 80px;
-    justify-content: space-between;
-}
-
 .feature-item {
     width: 300px;
-}
-
-.index-colums {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 35px;
-    padding: 50px 80px;
 }
 
 .news{
@@ -439,25 +443,6 @@ a {
     width: 300px;
 }
 
-.main-footer {
-    margin-top: 65px;
-    padding: 50px;
-}
-
 .main-footer .container {
     display: flex;
-}
-
-.footer-contacts {
-    width: 320px;
-    margin-right: 90px;
-}
-
-.footer-social {
-    width: 150px;
-}
-
-.footer-copyright {
-    width: 140px;
-    margin-left: auto;
 }
