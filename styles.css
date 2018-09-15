@@ -14,7 +14,7 @@ body {
     padding: 0;
 
     font-family: "PT Sans Narrow", Arial, sans-serif;
-    font-style: 14px;
+    font-size: 14px;
     line-height: 24px;
     font-weight: 700;
     color: #ffffff;
@@ -24,6 +24,11 @@ body {
     background-image: url(img/background-image.jpg);
     background-position: top center;
     background-repeat: no-repeat;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .inner-page {
@@ -40,6 +45,10 @@ a {
 }
 
 .button {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-right: 10px;
+
     font:inherit;
 
     text-align: center;
@@ -47,6 +56,13 @@ a {
     background-color: black;
     border: none;
     text-transform: uppercase;
+}
+
+.button.disabled,
+.button:disabled {
+  cursor: default;
+  opacity: 0.5;
+  background-color: #000000;
 }
 
 .button:hover,
@@ -60,7 +76,7 @@ a {
     line-height: 20px;
     color: #ffffff;
 
-/*  СТИЛИ ДЛЯ СЕТКИ   */
+    /*  СТИЛИ ДЛЯ СЕТКИ   */
     display: flex;
     flex-basis: 30%;
     flex-direction: column;
@@ -98,6 +114,15 @@ a {
 
 .feature-item {
     text-align: center;
+
+    width: 300px;
+    text-align: center;
+}
+
+.feature-item p {
+    padding: 0 0;
+    margin: 0 0;
+    text-align: center;
 }
 
 .feature-item h3 {
@@ -109,9 +134,11 @@ a {
     color:#000000;
 
     background-color: #f8f5f2;
-    background-image: url(img/background-1.jpg);
-    background-repeat: repeat;
-    background-position: 0 0;
+    background-image: 
+    url(img/background-line.png),
+    url(img/background-1.jpg);
+    background-repeat: no-repeat, repeat;
+    background-position: center, 0 0;
 
     /*СТИЛИ ДЛЯ СЕТКИ*/
     display: flex;
@@ -123,22 +150,69 @@ a {
 .index-colums h2{
     font-size: 30px;
     line-height: 42px;
+    margin: 0;
+    margin-bottom: 25px;
 }
 
 .news-list {
     list-style: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.news-list p {
+    margin: 0;
+}
+
+.news-item {
+    margin-bottom: 25px;
 }
 
 .news-item time {
     text-transform: none;
+    margin: 0;
+    padding: 0;
 }
 
 .gallery-content {
+    height: 164px;
+    margin: 0;
+    margin-bottom: 45px;
+
     background-color: #cccccc;
     border: 7px solid #ffffff;
-  }
+}
+
+.gallery-content img {
+    width: 286px;
+    height: 164px;
+}
+
+.gallery-button {
+    box-sizing: border-box;
+    width: 140px;
+}
+
+.gallery-button-container {
+    display: flex;
+}
+
+.gallery-button-container .button:nth-child(2) {
+    margin-right: 0;
+    margin-left: 10px;
+}
 
 .appointment-item input {
+    box-sizing: border-box;
+    width: 140px;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+
     font: inherit;
 
     background-color: transparent;
@@ -158,7 +232,7 @@ a {
     background-repeat: repeat;
 
     margin-top: 65px;
-    padding: 50px;
+    padding: 55px 0;
 }
 
 .product-photo-preview {
@@ -241,6 +315,9 @@ a {
 }
 
 .catalog-list {
+    display: flex;
+    margin:0;
+    padding:0;
     list-style: none;
 }
 
@@ -280,6 +357,10 @@ a {
 
 .pagination-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
+    margin-left: 240px;
 }
 
 .pagination-item a {
@@ -295,6 +376,7 @@ a {
 
 .footer-contacts {
     width: 320px;
+    margin: 0;
     margin-right: 90px;
 }
 
@@ -310,24 +392,60 @@ a {
 
 .footer-social {
     text-align: center;
-
-    width: 150px;
+    width: 153px;
 }
 
 .footer-social ul {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 141px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.footer-social b {
+    display: block;
+    margin-bottom: 12px;
 }
 
 .social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #ffffff;
+    width: 43px;
+    height: 43px;
+    background-color: #000000;
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: #ffffff;
+}
+
+.social-button:hover path,
+.social-button:focus path {
+  fill: #000000;
 }
 
 .footer-copyright {
     text-align: center;
-
-    /*СТИЛИ ДЛЯ СЕТКИ*/
-    width: 140px;
+    width: 150px;
+    margin: 0;
     margin-left: auto;
+}
+
+.footer-copyright b {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-copyright .button {
+    display: block;
+    margin-right: 0;
+    
 }
 
 .footer-copyright .button:hover,
@@ -400,15 +518,52 @@ a {
 }
 
 .site-navigation {
+    display: flex;
+    flex-wrap: wrap;
     width: 640px;
     margin: 0;
     padding: 0;
 }
 
+.site-navigation a,
+.user-navigation a {
+    display: block;
+    color: #ffffff;
+    margin: 0;
+    padding: 25px 20px;
+    vertical-align: middle;
+}
+/*--------------------------ОШИБКУ ЧЕКНУТЬ------------------------*/
 .user-navigation {
-    width: 140px;
+    display: flex;
+    max-width: 140px;
     margin: 0;
     padding: 0;
+}
+
+.user-navigation .login-link{
+    padding-left: 50px;
+    position: relative;
+}
+
+.login-link::before {
+    content: "";
+
+    position: absolute;
+    top: 27px;
+    left: 24px;
+    width: 16px;
+    height: 18px;
+    background-image: url(img/login.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+}
+
+.login-link:hover::before,
+.login-link:focus::before,
+.login-link:active::before {
+    opacity: 1;
 }
 
 .container {
@@ -422,8 +577,25 @@ a {
     justify-content: space-between;
 }
 
-.feature-item {
-    width: 300px;
+.feature-item h3 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 60px;
+}
+
+.feature-item h3::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: -30px;
+    left: 50%;
+    margin-left: -10px;
+/*=============================================================*/
+    transform: rotate(45deg);
+
+    background-color: #ffffff;
 }
 
 .news{
@@ -439,10 +611,125 @@ a {
     width: 380px;
 }
 
+.contacts p {
+    margin: 0;
+    margin-bottom: 25px;
+}
+
 .appointment {
     width: 300px;
 }
 
+.appointment .button {
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.appointment-info {
+    margin: 0;
+    padding-bottom: 15px;
+}
+
+.appointment-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.appointment-item {
+    width: 140px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.appointment-item label {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
 .main-footer .container {
     display: flex;
+}
+
+/*------------------------СТИЛИ ДЛЯ КАТАЛОГА-------------------------------- */
+
+.inner-page .main-header {
+    
+    margin-bottom: 50px;
+    background-color: #000000;
+}
+
+.inner-page .main-header-logo {
+    order: 0;
+    width: 111px;
+    height: 24px;
+    padding: 23px 20px;
+  }
+
+.inner-page .main-navigation {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.inner-page .user-navigation {
+    margin-left: auto;
+  }
+
+.container .page-title {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.inner-page breadcrumbs {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.inner-page filters {
+    width: 180px;
+}
+
+.catalog {
+    width: 700px;
+}
+
+.catalog-colums {
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog-item {
+    width: 220px;
+    margin-bottom: 20px;
+}
+
+.catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+
+.catalog-item:nth-child(3n) {
+    margin-right: 0;
+  }
+
+.inner-page .main-footer {
+    margin-top: 45px;
+}
+
+.filters {
+    width: 180px;
+    min-height: 687px;
+}
+
+.product-info {
+    width: 390px;
 }
