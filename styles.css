@@ -703,9 +703,18 @@ a {
 }
 
 .site-navigation-current {
-    background-image: url(img/site-navigation-current.png);
-    background-position: bottom;
-    background-repeat: no-repeat;
+    position: relative;
+}
+
+.site-navigation-current::after {
+    position: absolute;
+    content: "";
+    height: 4px;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    
 }
 
 .site-navigation a,
