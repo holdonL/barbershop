@@ -1,12 +1,12 @@
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
 }
 
 body {
@@ -723,7 +723,6 @@ a {
     color: #ffffff;
     margin: 0;
     padding: 25px 20px;
-    vertical-align: middle;
 }
 .user-navigation {
     display: flex;
@@ -946,4 +945,8 @@ a {
 
 .filters {
     width: 180px;
+}
+
+.modal {
+    display: none;
 }
