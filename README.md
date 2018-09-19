@@ -1,2 +1,2 @@
 # barbershop
-сайт барбершопа
+https://holdonl.github.io/barbershop/
