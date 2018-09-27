@@ -1,2 +1,1 @@
-# barbershop
-https://holdonl.github.io/barbershop/
+Макет Barbershop HTML Academy.
