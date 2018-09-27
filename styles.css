@@ -1172,3 +1172,7 @@ a {
 .filters {
     width: 180px;
 }
+
+iframe {
+    border: 0;
+}
